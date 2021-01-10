@@ -1,0 +1,16 @@
+﻿
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $.getJSON("fac/getfaculty",
+            function (json) {
+                for (var i = 0; i < json.length; i++) {
+                    $('#listFaculty').append(json[i].name);
+                }
+            });
+   
+    });
+</script>
+
+<span></span>

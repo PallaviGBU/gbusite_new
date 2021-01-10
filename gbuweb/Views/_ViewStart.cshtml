@@ -1,0 +1,9 @@
+﻿@{
+    if (Context.Request.Path.StartsWith("/Admissions", StringComparison.OrdinalIgnoreCase))
+    { Layout = "~/Views/Shared/_LayoutAdmission.cshtml"; }
+    else
+    { Layout = "~/Views/Shared/_Layout.cshtml"; }
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+

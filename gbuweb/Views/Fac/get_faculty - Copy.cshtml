@@ -1,0 +1,79 @@
+﻿@model IEnumerable<gbuweb.Models.Faculty>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.school)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.qualification)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.field_of_teaching)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.image)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.position)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.school)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.qualification)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.field_of_teaching)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.image)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+@foreach (var item in Model)
+{
+    <div class="card rteleft facultycard" style="width:350px" dept="7" type="regular">
+        <strong><img alt="" src="../../images/@Html.DisplayFor(modelItem => item.image)" style="float:left;height:150px;"><a href="/faculty/@Html.DisplayFor(modelItem => item.name)">  @Html.DisplayFor(modelItem => item.name)</a></strong>
+        <p>
+            <strong>
+                @Html.DisplayFor(modelItem => item.position)
+            </strong>
+        </p>
+        <p>  @Html.DisplayFor(modelItem => item.qualification)</p>
+        <p>  @Html.DisplayFor(modelItem => item.field_of_teaching)</p>
+    </div>
+}

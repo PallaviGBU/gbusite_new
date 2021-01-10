@@ -1,0 +1,20 @@
+
+<div class="container">
+		<h2 class="text-lg-left mt-4 mb-0">Tenders</h2>
+		<div class=" mb-3 mt-2 float-left" style="height: 5px; width: 5%; background-color:#FB8C00 "></div>
+
+<br><br>
+<%tenders.forEach(function(tender){%>
+	<div class="card mt-2 mb-3">
+  <div class="card-header">
+    <%=tender.createdAt.getDate() + "/" + (tender.createdAt.getMonth() + 1) + "/" + tender.createdAt.getFullYear()%>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title_rohit"><%=tender.title%></h5>
+    <a href="/files/tenders/<%=tender.file%>" class="btn btn-primary  float-right">Details</a>
+  </div>
+</div>
+<%})%>
+	</div>
+	</body>
+

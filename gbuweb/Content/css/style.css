@@ -1,0 +1,1220 @@
+
+body {
+  zoom: 100%;
+
+  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align:justify; 
+  text-justify:auto;
+}
+p{
+  text-align:justify; 
+  text-justify:auto;
+}
+
+#first-nav {
+  background: #78335D ;
+}
+
+#top-navigation {
+  background: #fff;
+}
+
+#college-name {
+  font-size: 2.3vh;
+  font-weight: 600;
+  color: #010327;
+  vertical-align: middle;
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+.college-name-tag {
+  font-size: 11px;
+  color: #000;
+  font-weight: 300;
+  display: inline-block;
+  text-decoration: none;
+}
+
+#search {
+  width: 100%;
+  display: inline-block;
+  border: 1px solid #ecf0f1;
+  padding: 3px;
+  transform: skewX(15deg);
+
+}
+
+#search input {
+  border: 0;
+  box-shadow: none;
+  width: 100%;
+  margin-left: 5px;
+  transform: skewX(-15deg);
+  padding-left: 35px;
+  background: url(../../img/search_logo.png);
+  background-position: 2%;
+  background-size: 2.5vh;
+  background-repeat: no-repeat;
+
+}
+
+
+.navbar-toggler {
+  color: #012454;
+}
+
+.navbar {
+  color: #010327;
+  background: #fff;
+  /*border-bottom: 3px solid #F4A460; */
+}
+
+.nav-1 {
+  font-size: 13px;
+  background: #78335D !important;
+  color: #fff !important;
+  font-weight: 500;
+
+}
+
+.nav-1:hover {
+  color: #C0C0C0 !important;
+  font-size: 13px;
+
+}
+
+#nav-2-box {
+  border: 0.1px solid #ecf0f1;
+  transform: skewX(15deg);
+}
+
+.nav-2 {
+  font-weight: 400;
+  color: #010327;
+  font-size: 14px;
+  transform: skewX(-15deg);
+  text-decoration: none;
+}
+
+#nav-2-box:hover {
+  transform: skewX(15deg);
+  background: #FF4343;
+  color: #fff;
+  transition: all .5s;
+}
+
+.nav-2:hover {
+  color: #fff;
+  text-transform: skewX(15deg);
+}
+
+.main-navigation-wrapper {
+  width: 100%;
+  padding: 0;
+  background: #fff;
+  /*  border-top: 3px solid #012454;
+*/
+}
+.main-navigation-a {
+  color: #000;
+  font-size: 15px;
+  margin: 0;
+  letter-spacing: 0px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 7px;
+  width: 100%;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all .7s;
+}
+
+.main-navigation-a:hover {
+  background: #FF4343;
+  color: #fff;
+  transform: scale(1.0);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.toggleNav {
+  display: none;
+}
+
+.flex-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.flex-nav li {
+  flex: 3;
+}
+
+@media all and (max-width: 992px) {
+  .flex-nav ul {
+    flex-wrap: wrap;
+  }
+
+  .flex-nav li {
+    flex: 1 1 50%;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .toggleNav {
+    display: block;
+  }
+
+  .flex-nav ul {
+    display: none;
+  }
+
+  .flex-nav ul.open {
+    display: flex;
+  }
+}
+
+.dropdown-menu {
+  padding: 10px;
+}
+.dropdown-item:hover{
+  background-color: #FF4343;
+  color: #fff;
+  transition: .3s ease-in-out;
+}
+
+#main-carousel {
+  max-height: 400px;
+}
+
+#main-page-news-media-box {
+  background: lightblue;
+}
+
+#section0-card {
+  max-width: 400px;
+  height: 400px;
+}
+
+#section0-card-header {
+  background: #010327;
+  color: #fff;
+  border-bottom: 2px solid #C0C0C0;
+  font-weight: 600;
+}
+
+#section0-card-body {
+  background: white;
+
+}
+
+#section0-media-body-heading {
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 15px;
+  color: #012454;
+}
+
+#section0-media-body-text {
+  color: #000;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+#media-date-box {
+  background-color: green;
+  vertical-align: middle;
+}
+
+#media-date-box-heading {
+  color: #fff;
+}
+
+#media-date-box-p {
+  font-size: 10px;
+  font-weight: 400;
+  color: #fff;
+}
+
+#section-0-media-h6 {
+  font-weight: 600;
+}
+
+#section-0-media-p {
+  font-size: 13px;
+}
+
+#section0-row2 {
+  background: #cc3636;
+  width: 50%;
+  text-decoration: none;
+}
+
+#section0-row2 a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#section0-row2-text {
+  font-weight: 400;
+}
+
+#important-card-header {
+  font-size: 15px;
+  font-weight: 500;
+  background: white;
+  color: #000;
+  max-height: 40px;
+}
+
+#important-card-body {
+  font-size: 14px;
+}
+
+#header-section-1 {
+  color: #010327;
+}
+
+#section1-card {
+  max-height: 330px;
+}
+
+#section1-card-body-link {
+  color: #000;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#section1-card-body-link:hover {
+  color: red;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#section1-carousel {
+  position: relative;
+  max-height: 350px;
+
+}
+
+#section1-card-header1 {
+  background: #DC143C;
+  color: #fff;
+  font-weight: 500;
+
+}
+
+#section1-card-header2 {
+  background: #C2185B;
+  color: #fff;
+  font-weight: 500;
+
+}
+
+#header-h1-campus-life {
+  text-align: center;
+  font-weight: 700;
+  color: #000;
+}
+
+#header-p-campus-life {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+#strong-figure {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#p-figure {
+  font-size: 22px;
+}
+
+#section-events {
+  background: #FF4343;
+}
+
+.events-img {
+  border-bottom: 4px solid #800000;
+}
+
+#section2 {
+
+  color: #010327;
+
+}
+
+#section-media {
+  color: #010327;
+  background: #808080;
+}
+
+#section4 {
+  /*background-image: linear-gradient(to right top, #9a1a63, #b03762, #c25363, #d06e67, #db8971, #e59874, #eea877, #f5b97c, #fcc474, #ffd16c, #ffde65, #fbed5f);*/
+background-image: -webkit-linear-gradient(0deg, #3224b0 0%, #be5ede 100%);
+}
+
+/* equal card height */
+.row-equal>div[class*='col-'] {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.row-equal .card {
+  width: 100%;
+}
+
+/* ensure equal card height inside carousel */
+.carousel-inner>.row-equal.active,
+.carousel-inner>.row-equal.next,
+.carousel-inner>.row-equal.prev {
+  display: flex;
+}
+
+/* prevent flicker during transition */
+.carousel-inner>.row-equal.active.left,
+.carousel-inner>.row-equal.active.right {
+  opacity: 0.5;
+  display: flex;
+}
+
+
+/* control image height */
+
+
+.card-img-top-250 {
+  height: 200px;
+  overflow: hidden;
+}
+
+/* schools hover */
+
+#card-img-div{
+
+  align-content: center;
+}
+#card-img-text{
+  background: rgba(0, 0, 0, 0.27);
+  opacity: 0.8;
+  width: 70%;
+  color: #fff;
+
+}
+
+.img-hover-zoom {
+  overflow: hidden;
+}
+
+.img-hover-zoom img {
+  filter: blur(2.5px);
+  transition: transform .5s ease;
+}
+
+.img-hover-zoom h6 {
+  filter: blur(0px);
+  background: #151313;
+  border: 1px solid white;
+  padding: 15px;
+  position: absolute;
+  color: #fff;
+  opacity: 0.5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 1s ease;
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.05);
+  filter: blur(0);
+  opacity: 1;
+}
+
+.img-hover-zoom:hover h6 {
+  display: none;
+}
+
+/* schools hover  end*/
+
+
+#library-section-jumbotron {
+  background: #DDA0DD;
+}
+
+#meditation-center-jumbotron {
+  background: #00FA9A;
+}
+
+#eveningout-jumbotron {
+  background: #FFE4C4;
+}
+
+.carousel-caption {
+  text-align: center;
+  font-weight: 600;
+  animation-delay: 1s;
+}
+
+@media only screen and (max-width: 900px) {
+  .carousel-caption h1 {
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+}
+
+
+.bgimage_library {
+  background-image: url(./img/bannerwhite.png);
+}
+
+.navbarcolour {
+  background-color: #010327;
+  color: white;
+  border: none;
+  border-radius: 0;
+}
+
+.border {
+  display: inline-block;
+  /*width: 100%;*/
+  height: "auto";
+  margin: 10px;
+}
+
+.circle_image {
+  vertical-align: middle;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.icon_size {
+  font-size: 4em;
+  color: #010327;
+  vertical-align: middle;
+  position: relative;
+}
+
+.fixed-bg-mukul {
+  background-image: url("img_tree.gif");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron-billboard {
+  opacity: 0.8;
+  color: #fff;
+  background: #ccc;
+  background-size: cover;
+  position: absolute;
+}
+
+.bgimage_about_gb_mukul {
+  background-image: url('../../img/banner_about2.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 250px;
+}
+ 
+.bgimage_about_home_mukul {
+  background-image: url('../../img/banner_about1.png');
+  width: 100%;
+  height: 250px;
+}
+.bgimage_about2_home_mukul {
+  background-image: url('../../img/banner_about2 - Copy.png');
+  width: 100%;
+  height: 260px;
+}
+
+.bgimage_about_Committee_mukul {
+  background-image: url('../../img/banner_about4.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 250px;
+}
+
+.bgimage_iprcell_home_mukul {
+  background-image: url('../../ipr/img/ipr_cell_banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 250px;
+}
+
+.bgimage_about_report_mukul {
+  background-image: url('../../img/banner_report.png');
+  width: 100%;
+  height: 250px;
+}
+
+/*.{
+  background-color: #012454;
+  color: white;
+
+}*/
+
+.clubheader_rohit {
+  background-color: #FB8C00;
+  border-radius: 0;
+  border: none;
+}
+
+.card-title_rohit {
+  font-weight: bold;
+
+}
+
+.heightnow_rohit {
+  height: 450px;
+}
+
+.navbarcolour_rohit {
+  background-color: #78335D;
+  color: white;
+  border: none;
+  border-radius: 0;
+  font-weight: normal;
+}
+
+.navbarcolour_contact {
+  background-color: #78335D;
+  color: white;
+  border: none;
+  border-radius: 0;
+  font-weight: normal;
+}
+
+.newsletter_rohit {
+
+  height: 70px;
+  background-color: #FB8C07;
+  color: white;
+  border: none;
+  border-radius: 0;
+
+}
+
+.subscriber_rohit {
+
+  width: 480px;
+}
+
+.designevent_rohit {
+  color: #012454;
+}
+
+.designevent_rohitnew {
+  color: #012454;
+  font-size: 12px;
+}
+
+.eventlister_rohit {
+  color: #FB8C07;
+}
+
+.pagelinker_rohit {
+  color: #FB8C07;
+
+}
+
+.horizontalwidthfooter {
+  height: 10px;
+  background-color: #FB8C00;
+  color: white;
+
+
+}
+
+.mainlogo {
+  border-color: white;
+  color: white;
+  border-width: 3px;
+
+
+}
+
+.mainlogo:hover {
+  background-color: #FB8C07;
+  border-color: #FB8C07;
+}
+
+.footernow {
+
+  max-height: 230px;
+  background-color: #012454;
+  color: white;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .carousel-multi-item-2 .col-md-3 {
+    float: left;
+    width: 25%;
+    max-width: 100%;
+  }
+}
+
+.carousel-multi-item-2 .card img {
+  border-radius: 2px;
+}
+
+.news {
+  height: 100%;
+  max-height: 625px;
+  max-width: 1100px;
+
+}
+
+
+
+.drop {
+  transition: 1s ease-in-out;
+}
+
+.active-d {
+  border-bottom: 5px solid #acdaca;
+}
+
+.drop ul li a span {
+  padding: 5px 8px 10px 7px;
+}
+
+.drop ul li a span:hover {
+  border-bottom: 5px solid #acdaca;
+}
+
+.drop ul li {
+  display: inline;
+  text-decoration: none;
+  text-align: center;
+  font-family: "pf_dintext_promedium", sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.drop ul li a {
+  font-size: 12px;
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+#newsMenu{
+    color: white; 
+    border:none;
+    padding: 10px;
+    margin-top: -10px;
+  background-color: transparent;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-decoration: none;
+  display: inline-block;
+}
+#newsMenu{
+  display: none;
+}
+
+.drop ul {
+    position: static;
+   
+    display: block
+  }
+
+
+@media screen and (max-width: 992px) {
+  .drop ul {
+    position: absolute;
+    right: 15px;
+    top: 45px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f3f2ee;
+    z-index: 10;
+    
+  }
+  .drop ul li a span:hover {
+   border-bottom: none;
+   color: #0000006b;
+   text-shadow: 0 0 5px rgba(0,0,0,0.8);
+  }
+  #newsMenu{
+    display: block;
+  }
+  #newsMenu:hover{
+   color: white;
+   text-shadow: 0 0 5px rgba(0,0,0,0.8);
+  }
+  .drop ul li a {
+    font-size: 15px;
+    margin-top: 50px;
+    color: black;
+    text-decoration: none;
+  }
+}
+
+
+/**/
+.tab {
+  overflow: hidden;
+}
+.news-content div div div div div h5{
+  font-size: 1rem!important;
+}
+
+.news-content {
+  color: white;
+  text-decoration-style: none;
+}
+
+.news-content .col-md-3:hover {
+  background-color: #0000001c;
+  transition: 0.5s;
+  color: white;
+}
+
+.news-content a {
+  color: white;
+  font-size: 20px;
+  font-family: "pf_dintext_promedium", sans-serif;
+}
+
+.news-content a:hover {
+  text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 770px) {
+  .news-content div div div div div h5{
+    font-size: 0.9rem!important;
+    padding: 0px 3%;
+  }
+  
+
+}
+
+/*///////////////////// campus life*/
+
+
+.jumbotron {
+    padding: 2rem 0rem!important;
+  }
+.tagline h2{
+    line-height: 42px !important;
+    font-weight:400;
+    font-size: 6vh;
+    letter-spacing: 2px;
+}
+.campus-life-btn-div {
+  margin-left: 10px;
+  padding: 15px;
+  background-color: #FF4343 !important;
+  transition: 0.5s;
+  border-radius: 30px;
+}
+.campus-life-btn-div a{
+  padding: 10px;
+  color: #ffffff;
+  text-decoration: none;  
+}
+.campus-life-btn-div:hover{
+  transition: .5s ease-in-out;
+  border-radius: 30px solid #FF4343;
+
+  color: #fff;
+  background-color: #FF4343 !important;
+}
+
+@media (min-width: 576px){
+.jumbotron {
+    padding: 4rem 0rem!important;
+  }
+}
+@media (min-width: 300px){
+:not(#tve) [data-css="tve-u-16419572f9e"] {
+    font-size: 34px !important;
+    color: rgb(0, 0, 0) !important;
+}
+}
+/* tag lines*/
+@media (min-width: 300px){
+.tagline-bl{
+    box-shadow: none;
+    background-image: linear-gradient(rgb(0, 140, 149), rgb(0, 140, 149)), linear-gradient(rgb(164, 165, 169), rgb(164, 165, 169)), linear-gradient(rgb(93, 97, 95), rgb(93, 97, 95)), linear-gradient(rgb(0, 115, 119), rgb(0, 115, 119)) !important;
+    background-size: auto, auto, auto, auto !important;
+    background-position: 50% 50%, 50% 50%, 50% 50%, 50% 50% !important;
+    background-attachment: scroll, scroll, scroll, scroll !important;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat !important;
+}
+}
+.tcb-icon {
+    display: inline-block;
+    width: 2em;
+    height: 3em;
+    line-height: 1em;
+    vertical-align: middle;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    color: rgb(0, 140, 149);
+}
+
+@media screen and (max-width: 767px){
+  .news-img img {
+      width: 400px;
+      height: 200px;
+  }
+}
+/*=====================footer ======================*/
+#carousel-capton-text{
+  background-color: rgba(0, 0, 0, 0.36);
+    color: #fff;
+    box-shadow: 0px 0px 20px 0px #00000075;
+}
+ /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+      #carousel-capton-text h2{
+      font-size: 1.8vh;
+      }
+      #college-name{
+        font-size: 1.8vh;
+      }
+      .college-name-tag{
+        font-size: 0.8vh;
+      }
+      .logo{
+        max-width: 6.8vh;
+      }
+      .nav-t-x{
+        padding: .25rem 0rem!important;
+      }
+      #fill {
+        width: 180%;
+        margin-left: -40%;
+        margin-right: -40%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+    }
+      
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+      #carousel-capton-text h2{
+      font-size: 2.2vh;
+      }
+      #college-name{
+        font-size: 2vh;
+      }
+      .college-name-tag{
+        font-size: 1vh;
+      }
+      .logo{
+        max-width: 7vh;
+      }
+      
+      .nav-t-x{
+        padding: .25rem 0rem!important;
+      }
+      #fill {
+        width: 180%;
+        margin-left: -40%;
+        margin-right: -40%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+      #carousel-capton-text h2{
+      font-size: 2.5vh;
+      }
+      #college-name{
+        font-size: 2vh;
+      }
+      .college-name-tag{
+        font-size: 1vh;
+      }
+      .logo{
+        max-width: 7.7vh;
+      }
+      
+      .nav-t-x{
+        padding: .25rem 0rem!important;
+      }
+      #fill {
+        width: 160%;
+        background-size: cover;
+        background-position: center;
+        margin-left: -30%;
+        margin-right: -30%;
+        background-repeat: no-repeat;
+      }
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+      #carousel-capton-text h2{
+      font-size: 3.2vh;
+      }
+      #college-name{
+        font-size: 2.2vh;
+      }
+      .college-name-tag{
+        font-size: 1.2vh;
+      }
+      .logo{
+        max-width: 9vh;
+      }
+      
+      .nav-t-x{
+        padding: .25rem 0rem!important;
+      }
+      #fill {
+        width: 100%;
+        background-size: cover;
+        margin: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+      #carousel-capton-text h2{
+      font-size: 3.8vh;
+      }
+      #college-name{
+        font-size: 2.4vh;
+      }
+      .college-name-tag{
+        font-size: 1.5vh;
+      }
+      .logo{
+        max-width: 10vh;
+      }
+      
+      .nav-t-x{
+        padding: .25rem 0rem!important;
+      }
+      #fill {
+        width: 100%;
+        background-size: cover;
+        margin: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+
+
+#card-image{
+  height: 280px;
+  margin: 0px auto;
+  max-width: 250px;
+  align-items: center;
+  }
+#fa-size{
+  font-size: 22px;
+}
+.block-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+}
+
+
+/*pop up css
+*/
+
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#26262c;
+  display:none;
+}  
+#boxes .window {
+  position:absolute;
+  left:0;
+  top:0;
+  width:440px;
+  height:850px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+  border-radius: 5px;
+  text-align: center;
+}
+#boxes #dialog {
+  width:50%; 
+  height:50%;
+  padding: 10px 10px 10px 10px;
+  background-color:#ffffff;
+  font-size: 15pt;
+}
+
+.agree:hover{
+  background-color: #D1D1D1;
+}
+.popupoption:hover{
+ background-color:#D1D1D1;
+ color: green;
+}
+.popupoption2:hover{
+ color: red;
+}
+
+/*popup css ends here*/
+
+#website-council-link{
+  text-decoration: none;
+  color:#030523;
+  font-weight: 600;
+
+}
+
+#website-council-link:hover{
+  text-decoration: none;
+}
+.clubheader1{
+      background-color: #FB8C00;
+      border-radius: 0;
+      border: none;
+      }
+      /* Extra small devices (phones, 600px and down) */
+      @media only screen and (max-width: 600px) {
+      .clubheader1{
+      height: 142px;
+      }}
+      @media only screen and (min-width: 768px) {
+      .clubheader1{
+      height: 150px;
+      }}
+      @media only screen and (min-width: 992px) {
+      .clubheader1{
+      height: 168px;
+      }}
+      @media only screen and (min-width: 1200px) {
+      .clubheader1{
+      height: 155px;
+      }}
+
+
+/* Club Bannet css*/
+.club-head{
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+}
+.club-heading{
+  padding: 44px 0px;
+}
+@media only screen and (max-width: 768px){
+  .club-heading h1{
+    padding: 5px 0px;
+    font-size: 30px!important;
+  }
+  .club-heading h3{
+    font-size: 25px;
+  }
+}
+
+/*  Faculty css start */
+
+.jumbotron{
+  background-color: #ffffff!important;
+  }
+  @media only screen and (max-width: 575px){
+  .head-title{
+  text-align: center !important;
+  }
+  .profile-image{
+  width: 320px!important;
+  max-height: 380px!important;
+  }
+  }
+  @media only screen and (max-width: 767px){
+  
+  .gbulogoonpage{
+  display: none;
+  }
+  
+  }
+  @media only screen and (max-width: 1000px){
+  .header-profile div h1{
+  font-size:29px!important;
+  }
+  /* .header-profile div h6, h4{
+  font-size: 0.8rem!important;
+  } */
+  .gbulogoonpage img{
+  width:150px!important;
+  }
+  }
+  #content ul li{
+  color: #32668F;
+  }
+  #content ul li a{
+  color: #E25822;
+  text-decoration: none;
+  }
+  @media only screen and (max-width: 767px){
+  .profesh{
+  display: none;
+  }
+  .profesh-2{
+  background-color: #78335d!important;
+  }
+  .profesh-2 ul li a{
+    color: #ffffff!important;
+  }
+  }
+  #content ul li{
+  margin-bottom: 15px;
+  }
+
+/* faculty css end */
+
+
+
+#text-description-card {
+  text-decoration: none;
+  font-size: 15px;
+  color: #a7a7a7;
+  text-align: justify;
+}
+#text-description-card a{
+  text-decoration: none;
+  font-size: 15px !important;
+  color: #a7a7a7;
+  text-align: justify;
+}

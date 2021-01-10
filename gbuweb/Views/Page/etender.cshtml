@@ -1,0 +1,42 @@
+
+	<head>
+		<title>GBU|e-Tenders</title>
+		<link rel="icon" type="image/gif/png" href="./img/logo_gbu.png">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/now.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<div class="jumbotron mb-0 clubheader" style="background-image: url(./img/banner5.png);background-size: cover;background-repeat: no-repeat; background-position-y: 64%;">
+			<div class="container mb-0 ">
+				<h1 class=" font-weight-light display-5 mb-0 text-right" style="color: white">
+				<strong>
+				E-Tenders
+				</strong>
+				</h1>
+				<hr class="mt-0  pt-0 mb-1">
+			</div>
+		</div>
+		<div class="alert alert-dark mt-0 mb-0 ml-0 mr-0 text-center navbarcolour" role="alert">
+			This section consists of all the E-Tenders!
+		</div>
+		<div class="container">
+			 <h3 class=" text-lg-left mt-4 mb-0">
+          List of E-Tenders
+          </h3>
+          <div class=" mb-3 mt-2 float-left" style="height: 5px; width: 10%; background-color:#FB8C00 "></div>
+          <br>
+			<%etenders.forEach(function(etender){%>
+	<div class="card mt-2 mb-3">
+  <div class="card-header">
+    <%=etender.createdAt.getDate() + "/" + (etender.createdAt.getMonth() + 1) + "/" + etender.createdAt.getFullYear()%>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title_rohit"><%=etender.title%></h5>
+    <a href="/files/tenders/<%=etender.file%>" class="btn btn-primary  float-right">Details</a>
+  </div>
+</div>
+<%})%>
+		</div>
+</body>
+
