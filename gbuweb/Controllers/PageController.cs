@@ -8,6 +8,8 @@ namespace gbuweb.Views
 {
     public class PageController : Controller
     {
+       
+
         // GET: Page
         public ActionResult Index()
         {
@@ -139,6 +141,13 @@ namespace gbuweb.Views
         public ActionResult Hostel()
         {
             return View();
+        }
+
+        public ActionResult Event(int? id)
+        {
+            var _db = new Models.MyDbContext();
+            var data = from s in _db.Entities where s.id == id select s;
+            return View("entity",data);
         }
     }
 }

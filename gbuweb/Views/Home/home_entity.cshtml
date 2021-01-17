@@ -1,0 +1,328 @@
+﻿@model IEnumerable<gbuweb.Models.Entity>
+
+
+<div id="highlights" style="background-color: #2f415f; padding: 10px 0px 40px 0px;">
+    <div class="news-header">
+        <div class="m-4" style="background-color: transparent;">
+            <div class="container pt-0">
+                <div class="row py-3">
+                    <div class="col-2">
+                        <h5 class=" text-white">
+                            <font style="vertical-align: inherit; text-transform: uppercase; letter-spacing: .2rem">Highlights</font>
+                        </h5>
+                    </div>
+                    <div class="col-10 text-right ">
+                        <div class="px-3 py-1 position-absolute " style="right: 0">
+                            <div class="drop">
+                                <div class="drop-news " style="border-bottom: 5px red;background-color: #a9a9a9;">
+                                    <button id="newsMenu" onclick="showCollapsNewsmenu()">News</button>
+                                </div>
+                                <ul id="myTab" class="nav nav-tabs display-5 text-white text-left">
+                                    <li>
+                                        <a href="#news" data-toggle="tab" onclick="active(this.textContent,this,1)">
+                                            <span id="0">Updates</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#events" data-toggle="tab" onclick="active(this.textContent,this, 2)">
+                                            <span id="1">Events</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#workshops" data-toggle="tab" onclick="active(this.textContent, this, 3)">
+                                            <span id="2">Workshops</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#notices" data-toggle="tab" onclick="active(this.textContent, this, 4)">
+                                            <span id="3">Notices</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#technology" data-toggle="tab" onclick="active(this.textContent, this, 5)">
+                                            <span id="4">Conferences</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#cultural" data-toggle="tab" onclick="active(this. textContent, this, 6)">
+                                            <span id="5">Activities</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-content">
+        <!--- update start-->
+        <div id="news" class="news-content tab-pane pt-1 active">
+            <div class=" mt-0" style="background-color: transparent;">
+                <div class="container text-center">
+                         <div class="row">
+                            @foreach (var item in Model)
+                            {
+                                <div class="col-md-3 ">
+                                    <a href="/page/event/@Html.DisplayFor(modelItem => item.id)" class="m-1">
+                                        <div class="tab">
+                                            <div class="news-img">
+                                                <img src="~/Content/userdata/entity/@Html.DisplayFor(modelItem => item.photo)" alt="img" class="" height="175px" width="248px">
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <p class="h6 text-left">@Html.DisplayFor(modelItem => item.title)</p>
+
+                                        <p id="text-description-card" class="text-left">
+                                            @if (@item.description.Length > 100)
+                                            {@item.description.Substring(0, 100)}
+                                        else
+                                        { @item.description}
+
+                                        </p>
+
+                                        <div class="date-time text-left">
+                                            <h1 style="text-transform: uppercase; font-size: 10px;letter-spacing: 4px; word-spacing: 1px; color: #ffffff8c; font-weight: 600">
+                                                @Html.DisplayFor(modelItem => item.createdAt)
+                                            </h1>
+                                            <p class="float-right" style="font-size:12px;">Read more</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            }
+                            </div>
+                </div>
+            </div>
+            <div class="view-more text-md-right pt-1 container">
+                <!-- <a href="/news" class="btn btn-sm btn-outline-secondary">Show More</a> -->
+            </div>
+        </div>
+        <!--- update ends-->
+        <!--- events start-->
+        <div id="events" class="news-content tab-pane pt-1">
+            <div class=" mt-0" style="background-color: transparent;">
+                <div class="container text-center">
+                    <%var count=0%>
+                    <div class="row">
+                        <%entities.forEach(function(entity){%>
+                        <%if(entity.type=="events" &&count<=7){%>
+                        <%count++%>
+                        <div class="col-md-3 ">
+                            <a href="/<%=entity.type%>/<%=entity._id%>" class="m-1">
+                                <div class="tab">
+                                    <div class="news-img">
+                                        <img src="/files/events/<%=entity.photo%>"
+                                             alt="img" class="" height="175px" width="248px">
+                                    </div>
+                                </div>
+                                <br>
+                                <p class="h6 text-left"><%=entity.title%></p>
+                                <%if(entity.description.split(" ").length>10){%>
+                                <p id="text-description-card" class="text-left">
+                                    <%-entity.description.split(" ").splice(0,10).join(" ")%>
+                                </p>
+                                <%}else{%>
+                                <p id="text-description-card" class="text-left">
+                                    <%-entity.description%>
+                                </p>
+                                <%}%>
+                                <div class="date-time text-left">
+                                    <h1 style="text-transform: uppercase; font-size: 10px;letter-spacing: 4px; word-spacing: 1px; color: #ffffff8c; font-weight: 600">
+                                        <%=entity.createdAt.getDate() + "/" + (entity.createdAt.getMonth() + 1) + "/" + entity.createdAt.getFullYear()%>
+                                    </h1>
+                                    <p class="float-right" style="font-size:12px;">Read more</p>
+                                </div>
+                            </a>
+                        </div>
+                        <%}})%>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more text-md-right pt-1 container">
+                <a href="/events" class="btn btn-sm btn-outline-secondary">Show More</a>
+            </div>
+        </div>
+        <!--- events ends-->
+        <!--- workshops start-->
+        <div id="workshops" class="news-content tab-pane pt-1">
+            <div class=" mt-0" style="background-color: transparent;">
+                <div class="container text-center">
+                    <%var count=0%>
+                    <div class="row">
+                        <%entities.forEach(function(entity){%>
+                        <%if(entity.type=="workshops" &&count<=7){%>
+                        <%count++%>
+                        <div class="col-md-3 ">
+                            <a href="/<%=entity.type%>/<%=entity._id%>" class="m-1">
+                                <div class="tab">
+                                    <div class="news-img">
+                                        <img src="/files/workshops/<%=entity.photo%>"
+                                             alt="img" class="" height="175px" width="248px">
+                                    </div>
+                                </div>
+                                <br>
+                                <p class="h6 text-left"><%=entity.title%></p>
+                                <%if(entity.description.split(" ").length>10){%>
+                                <p id="text-description-card" class="text-left">
+                                    <%-entity.description.split(" ").splice(0,10).join(" ")%>
+                                </p>
+                                <%}else{%>
+                                <p id="text-description-card" class="text-left">
+                                    <%-entity.description%>
+                                </p>
+                                <%}%>
+                                <div class="date-time text-left">
+                                    <h1 style="text-transform: uppercase; font-size: 10px;letter-spacing: 4px; word-spacing: 1px; color: #ffffff8c; font-weight: 600">
+                                        <%=entity.createdAt.getDate() + "/" + (entity.createdAt.getMonth() + 1) + "/" + entity.createdAt.getFullYear()%>
+                                    </h1>
+                                    <p class="float-right" style="font-size:12px;">Read more</p>
+                                </div>
+                            </a>
+                        </div>
+                        <%}})%>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more text-md-right pt-1 container">
+                <a href="/workshops" class="btn btn-sm btn-outline-secondary">Show More</a>
+            </div>
+        </div>
+        <!--- workshops ends-->
+        <!--- notices start-->
+        <div id="notices" class="news-content tab-pane pt-1">
+            <div class=" mt-0" style="background-color: transparent;">
+                <div class="container text-center">
+                    <%var count=0%>
+                    <div class="row">
+                        <%entities.forEach(function(entity){%>
+                        <%if(entity.type=="notices" &&count<=7){%>
+                        <%count++%>
+                        <div class="col-md-3 ">
+                            <a href="/<%=entity.type%>/<%=entity._id%>" class="m-1">
+                                <div class="tab">
+                                    <div class="news-img">
+                                        <img src="/files/notices/<%=entity.photo%>"
+                                             alt="img" class="" height="175px" width="248px">
+                                    </div>
+                                </div>
+                                <br>
+                                <p class="h6 text-left"><%=entity.title%></p>
+                                <%if(entity.description.split(" ").length>10){%>
+                                <p id="text-description-card" class="text-left">
+                                    <%-entity.description.split(" ").splice(0,10).join(" ")%>
+                                </p>
+                                <%}else{%>
+                                <p id="text-description-card" class="text-left">
+                                    <%-entity.description%>
+                                </p>
+                                <%}%>
+                                <div class="date-time text-left">
+                                    <h1 style="text-transform: uppercase; font-size: 10px;letter-spacing: 4px; word-spacing: 1px; color: #ffffff8c; font-weight: 600">
+                                        <%=entity.createdAt.getDate() + "/" + (entity.createdAt.getMonth() + 1) + "/" + entity.createdAt.getFullYear()%>
+                                    </h1>
+                                    <p class="float-right" style="font-size:12px;">Read more</p>
+                                </div>
+                            </a>
+                        </div>
+                        <%}})%>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more text-md-right pt-1 container">
+                <a href="/notices" class="btn btn-sm btn-outline-secondary">Show More</a>
+            </div>
+        </div>
+        <!--- notices ends-->
+        <!--- technology start-->
+        <div id="technology" class="news-content tab-pane pt-1">
+            <div class=" mt-0" style="background-color: transparent;">
+                <div class="container text-center">
+                    <%var count=0%>
+                    <div class="row">
+                        <%entities.forEach(function(entity){%>
+                        <%if(entity.type=="conferences" &&count<=7){%>
+                        <%count++%>
+                        <div class="col-md-3 ">
+                            <a href="/<%=entity.type%>/<%=entity._id%>" class="m-1">
+                                <div class="tab">
+                                    <div class="news-img">
+                                        <img src="/files/conferences/<%=entity.photo%>"
+                                             alt="img" class="" height="175px" width="248px">
+                                    </div>
+                                </div>
+                                <br>
+                                <p class="h6 text-left"><%=entity.title%></p>
+                                <%if(entity.description.split(" ").length>10){%>
+                                <p id="text-description-card" class="text-left">
+                                    <%-entity.description.split(" ").splice(0,10).join(" ")%>
+                                </p>
+                                <%}else{%>
+                                <p id="text-description-card" class="text-left">
+                                    <%-entity.description%>
+                                </p>
+                                <%}%>
+                                <div class="date-time text-left">
+                                    <h1 style="text-transform: uppercase; font-size: 10px;letter-spacing: 4px; word-spacing: 1px; color: #ffffff8c; font-weight: 600">
+                                        <%=entity.createdAt.getDate() + "/" + (entity.createdAt.getMonth() + 1) + "/" + entity.createdAt.getFullYear()%>
+                                    </h1>
+                                    <p class="float-right" style="font-size:12px;">Read more</p>
+                                </div>
+                            </a>
+                        </div>
+                        <%}})%>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more text-md-right pt-1 container">
+                <a href="/conferences" class="btn btn-sm btn-outline-secondary">Show More</a>
+            </div>
+        </div>
+        <!--- technology ends-->
+        <!--- cultural start-->
+        <div id="cultural" class="news-content tab-pane pt-1">
+            <div class=" mt-0" style="background-color: transparent;">
+                <div class="container text-center">
+                    <%var count=0%>
+                    <div class="row">
+                        <%entities.forEach(function(entity){%>
+                        <%if(entity.type=="activities" &&count<=7){%>
+                        <%count++%>
+                        <div class="col-md-3 ">
+                            <a href="/<%=entity.type%>/<%=entity._id%>" class="m-1">
+                                <div class="tab">
+                                    <div class="news-img">
+                                        <img src="/files/activities/<%=entity.photo%>"
+                                             alt="img" class="" height="175px" width="248px">
+                                    </div>
+                                </div>
+                                <br>
+                                <p class="h6 text-left"><%=entity.title%></p>
+                                <%if(entity.description.split(" ").length>10){%>
+                                <p id="text-description-card" class="text-left">
+                                    <%-entity.description.split(" ").splice(0,10).join(" ")%>
+                                </p>
+                                <%}else{%>
+                                <p id="text-description-card" class="text-left">
+                                    <%-entity.description%>
+                                </p>
+                                <%}%>
+                                <div class="date-time text-left">
+                                    <h1 style="text-transform: uppercase; font-size: 10px;letter-spacing: 4px; word-spacing: 1px; color: #ffffff8c; font-weight: 600">
+                                        <%=entity.createdAt.getDate() + "/" + (entity.createdAt.getMonth() + 1) + "/" + entity.createdAt.getFullYear()%>
+                                    </h1>
+                                    <p class="float-right" style="font-size:12px;">Read more</p>
+                                </div>
+                            </a>
+                        </div>
+                        <%}})%>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more text-md-right pt-1 container">
+                <a href="/activities" class="btn btn-sm btn-outline-secondary">Show More</a>
+            </div>
+        </div>
+        <!--- cultural ends-->
+    </div>
+</div>

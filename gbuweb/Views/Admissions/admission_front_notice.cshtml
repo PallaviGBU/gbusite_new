@@ -1,0 +1,11 @@
+﻿@model IEnumerable<gbuweb.Models.Notice>
+
+@foreach (var item in Model) {
+    <ul>
+        <li>
+            <a href="~/Content/userdata/admission/ @Html.DisplayFor(modelItem => item.pdf)"> @Html.DisplayFor(modelItem => item.title)    </a>
+        </li>
+    </ul>
+}
+
+

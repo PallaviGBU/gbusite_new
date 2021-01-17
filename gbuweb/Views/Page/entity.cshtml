@@ -1,32 +1,28 @@
-
-    <div class="container py-5">
-      <div class="card border-0">
+@model IEnumerable<gbuweb.Models.Entity>
+   
+<div class="container py-5">
+    <div class="card border-0">
         <div class="row">
-          <div class="col-md-4">
-           <img src="/files/<%=entity.type%>/<%=entity.photo%>" class="float-right"  height="175px" width="248px">
-          </div>
-          <div class="col-md-8 p-4 my-auto">
-            <div class="card-block px-3">
-              <h4><%=entity.title%></h4>
-              <p class="small"><%=entity.createdAt.getDate() + "/" + (entity.createdAt.getMonth() + 1) + "/" + entity.createdAt.getFullYear()%></p>
-              <p><%-entity.description%></p>
-              <h6>Download Links:</h6>
-              <p class="card-text">
-                <%entity.pdf.forEach(function(x){%>
-              <li>
-              <a style="color: green" href="/files/<%=entity.type%>/<%=x.filename%>" target="_blank"><%=x.filename%></a>
-              </li>
-                <%})%>
-            </div>
-          </div>
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4">
+                    <img src="~/Content/userdata/entity/@Html.DisplayFor(modelItem => item.photo)" class="float-right" height="175px" width="248px">
+                </div>
+                <div class="col-md-8 p-4 my-auto">
+
+                    <div class="card-block px-3">
+                        <h4>@Html.DisplayFor(modelItem => item.title)</h4>
+                        <p class="small">@Html.DisplayFor(modelItem => item.createdAt)</p>
+                        <p>@Html.DisplayFor(modelItem => item.description)</p>
+                        <h6>Download Links:</h6>
+                        <p class="card-text">
+                            <a href="~/Content/userdata/entity/@Html.DisplayFor(modelItem => item.pdf)">@Html.DisplayFor(modelItem => item.pdf)</a>
+
+                        </p>
+                    </div>
+
+                </div>
+            }
         </div>
     </div>
-</p>
 </div>
-</div>
-</div>
-</div>
-</div>
-    
-
-   

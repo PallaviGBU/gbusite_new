@@ -1,0 +1,150 @@
+@model IEnumerable<gbuweb.Models.Program>
+<div class="container pt-3">
+    <div class="container-fluid m-0 px-5 py-3">
+        @foreach (var item in Model)
+        {
+            <section class="inner-page">
+                <div class="inner-hadding">
+                    <div class="container">
+                        <div class="top-menu-sec" style="display:none">
+                            <h4>Browse Course</h4>
+                            <ul>
+                                <li class="active"><a href="program-detail2.html">Under Graduate</a></li>
+                                <li><a href="#">Post Graduate</a></li>
+                                <li><a href="#">Other Couser</a></li>
+
+
+                            </ul>
+                        </div>
+                        <h1 class="pb-1">@Html.DisplayFor(modelItem => item.name)</h1>
+
+                    </div>
+                </div>
+                <section class="inner_section course_pages programmes_detail">
+                    <div class="container">
+                        <div class="row">
+                            <div class="program_menu col-lg-9">
+                                <h3>Program Code <span>@Html.DisplayFor(modelItem => item.code)</span></h3>
+                            </div>
+                            <div class="course_applybtn col-lg-3">
+                                <a class="btn btn-primary disabled">Admission Not open  @Html.DisplayFor(modelItem => item.admissionopen)</a>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <strong>Department</strong>
+                                        @Html.DisplayFor(modelItem => item.department)
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <strong>School</strong>
+                                        @Html.DisplayFor(modelItem => item.school)
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <p>
+                                            <strong>Selection Process</strong>
+                                            @Html.DisplayFor(modelItem => item.slectionprocedure)
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="container-fluid course_info">
+                        <div class="container">
+                            <br />
+
+                            <div class="row course_text_box">
+
+                                <div class="col-lg-4 bg-info">
+                                    <p>
+                                        <strong>Eligibility</strong>
+                                        @Html.DisplayFor(modelItem => item.eligibility)
+                                        
+                                    </p>
+                                </div>
+
+                                <div class="col-lg-4 bg-info">
+                                    <p>
+                                        <strong>Duration</strong>
+                                        @Html.DisplayFor(modelItem => item.duration) (@Html.DisplayFor(modelItem => item.semester))
+                                    </p>
+                                </div>
+
+                                <div class="col-lg-4 bg-info">
+                                    <p>
+                                        <strong>No of Seats</strong>
+                                        @Html.DisplayFor(modelItem => item.seats)
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="programe_tabbing">
+                        <div class="container">
+                            <h2 class="mb-5">Fee Structure</h2>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid">
+                        <table class="table-sm table-responsive table-striped border-0" border="1">
+                            <thead>
+                                <tr class="text-center text-white" style="background-color: #78335d">
+                                    <th class="py-5">S.No.</th>
+                                    <th class="py-5">PROGRAMME(S)</th>
+                                    <th class="py-4">Registration Fee (&#8377;)<span class="text-danger">*</span> <span class="small">(NON-REFUNDABLE)</span></th>
+                                    <th class="py-4">Security Fee (&#8377;)<span class="text-danger">*</span> <span class="small">(REFUNDABLE)</span> </th>
+                                    <th class="py-4">Library Fee (&#8377;)<span class="text-danger">*</span></th>
+                                    <th class="py-4">Sports Fee (&#8377;)<span class="text-danger">*</span></th>
+                                    <th class="py-4">Examination Fee (&#8377;) <span class="small">(Per Sem)</span></th>
+                                    <th class="py-4">Academic Fee (&#8377;) <span class="small">(Per Sem)</span></th>
+                                    <th class="py-4">Total Fee (&#8377;) <span class="small"> <br>(1<sup>st</sup> Sem)</span></th>
+                                    <th class="py-4">Total Fee (&#8377;) <span class="small"> <br>(2<sup>nd</sup> Sem <span class="text-primary">#</span>)</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td>B. Tech. Programmes (ME/EE/CE) (4-Year ) &amp; B.Tech. (Lateral Entry)</td>
+                                    <td>10,000/-</td>
+                                    <td>10,000/-</td>
+                                    <td>1,000/-</td>
+                                    <td>500/-</td>
+                                    <td>500/-</td>
+                                    <td>65,000/-</td>
+                                    <td>87,000/-</td>
+                                    <td>65,500/-</td>
+                                </tr>
+                        </table>
+                    </div>
+
+                    <div class="programe_tabbing">
+                        <div class="container">
+                            <h2 class="mb-5">Course Structure</h2>
+                            <a href="\gbudata\AcadProg\SOVSAS\BHM_CS">PDF</a>
+                        </div>
+                    </div>
+                </section>
+                <!--end About Section -->
+            </section>
+        }
+
+</div>
+    </div>

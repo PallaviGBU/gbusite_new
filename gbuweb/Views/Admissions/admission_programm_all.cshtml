@@ -1,0 +1,233 @@
+@model IEnumerable<gbuweb.Models.Program>
+
+<div class="container pt-3">
+    <div class="container-fluid m-0 px-5 py-3">
+        <div class="text-center">
+            <h1>Programs @@ GBU </h1>
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <ul class="nav d-flex flex-wrap text-center">
+                        <li class="btn btn-info nav-itemc m-1">
+                            <a href="#home" class="nav-link text-white" data-toggle="tab"><h3>Under Graduation</h3>  </a>
+                        </li>
+                        <li class="btn btn-info nav-item nav-itemc m-1">
+                            <a href="#noti" class="nav-link text-white" data-toggle="tab"><h3> Post Graduation </h3></a>
+                        </li>
+
+                        <li class="btn btn-info nav-item nav-itemc m-1">
+                            <a href="#msg" class=" nav-link text-white" data-toggle="tab"> <h3>Ph.D/M.Phil</h3> </a>
+                        </li>
+                        <li class="btn btn-info nav-item nav-itemc m-1">
+                            <a href="#cr-dp" class="nav-link text-white" data-toggle="tab"> <h3>Certification/Diploma </h3></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!--E tab -->
+        <div class="container mb-0 text-center">
+            <div class=" tab-content container">
+                <div class="tab-pane active" id="home">
+                    <br>
+                    <div class="fadeuponsc row w-100">
+                        <div class="container m-0 ttab w-100">
+                            <div class="cl1 ttabc-com mr-2">
+                                <div class="stats-copy">
+                                    <h2 class="text-lg-left text-sm-center">Undergraduation Admissions</h2>
+                                    <div class="" style="height: 5px; width: 150px; background-color:#FB8C00"></div>
+                                    <br>
+                                    <div class="text-justify">
+                                        <h5 class="">Undergraduation Courses</h5>
+
+                                        <table class="table table-striped">
+                                            @foreach (var item in Model)
+                                            {
+                                                if (item.level == "UG")
+                                                {
+                                                <tr>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.code)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.name)
+                                                    </td>
+                                                    <td>
+                                                        <a href="/admissions/program/@Html.DisplayFor(modelItem => item.id)"> Details</a>
+                                                    </td>
+                                                </tr>
+                                                }
+                                            }
+
+                                        </table>
+                                        <p>
+
+                                            B.Tech. in Civil Engineering, Mechanical Engineering, Electrical Engineering, Computer Science Engineering & Electronics and Communication Engineering, Food Processing and Technology, Biotechnology, Integrated Dual Degree
+                                            Programme BBA-MBA, Integrated Dual Degree Programme BBA-MBA, BA+ LLB (5-Year Integrated Programme), Bachelor in Architecture (B. Arch), B.Tech in Information Technology (IT), B. Sc., B. Voc. (Bachelor of Vocational Studies) in
+                                            Food Processing, B.A. (Hons.)-MA in Buddhist Studies and Civilization.
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <!-- <a href="https://gbu.epravesh.com/" class="xcdx-btn text-white p-4">Undergraduation Admissions</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container tab-pane" id="noti">
+
+                    <div class="fadeuponsc row w-100">
+                        <div class="container m-0 ttab w-100">
+                            <div class="cl1 ttabc-com mr-2">
+                                <div class="stats-copy">
+                                    <h2 class="text-lg-left">Postgraduation courses</h2>
+                                    <div style="height: 5px; width: 150px; background-color:#FB8C00"></div>
+                                    <br>
+                                    <div class="text-justify">
+                                        <table class="table table-striped">
+                                            @foreach (var item in Model)
+                                            {
+                                                if (item.level == "PG")
+                                                {
+                                                    <tr>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.code)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.name)
+                                                        </td>
+                                                        <td>
+                                                            <a href="/admissions/program/@Html.DisplayFor(modelItem => item.id)"> Details</a>
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            }
+
+                                        </table>
+
+                                                           <p>
+                                            M. Plan (Master of Urban and Regional Planning), M.Tech in Power System Engineering, M.Tech in Instrumentation and Control, M.Tech in Power Electronics and Drives, M.Tech (Biotech), M.Tech in Specialization in Software
+                                            Engineering, M. Tech in Specialization in Intelligent System and Robotics, M.Tech in Specialization in Wireless Communication and Networks, M.Tech in Specialization in VLSI Design, M.Tech in Computer Science.
+                                        </p>
+                                        <p class="text-justify">
+                                            M.Tech in Embedded System, M.Tech in Food Processing and Technology, M. Sc. in Applied Chemistry, M. Sc.in Applied Physics, M. Sc. in Applied Mathematics, M.
+                                            Sc. in Environmental Science, M. Sc. in Food Science, MA in Buddhist Studies & Civilization, M. Phil in Buddhist Studies & Civilization, MA in Education, MA in History and Civilization, MA in Economics, Planning and
+                                            Development, MA in English, MA in Hindi, MA in Urdu, MA in Mass Communication, MSW(Master in Social Work), MA in Sociology, MA in Political Science and International Relations, MA/M.Sc. in Applied Psychology, Master in
+                                            Disability Rehabilitation & Administration, M.Phil in Clinical Psychology, Master in Public Policy and Governance
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="container tab-pane" id="msg">
+                    <br>
+                    <div class="fadeuponsc row w-100">
+                        <div class="container m-0 ttab w-100">
+                            <div class="cl1 ttabc-com mr-2">
+                                <div class="stats-copy">
+                                    <h2 class="text-lg-left">Ph.D/M.Phil Admissions</h2>
+                                    <div style="height: 5px; width: 150px; background-color:#FB8C00"></div>
+                                    <br>
+                                    <div class="text-justify">
+                                        <h5>Ph.D/M.Phil courses</h5>
+
+                                        <table class="table table-striped">
+                                            @foreach (var item in Model)
+                                            {
+                                                if (item.level == "PHD")
+                                                {
+                                                    <tr>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.code)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.name)
+                                                        </td>
+                                                        <td>
+                                                            <a href="/admissions/program/@Html.DisplayFor(modelItem => item.id)"> Details</a>
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            }
+
+                                        </table>
+                                        <p>
+                                            Ph.D. (Electrical Engg.), (Power converters & Drives, Control System Optimization, Biomedical Instrumentation & Image Processing), Ph.D. in Civil Engineering, Ph.D. (Architecture & Planning), Ph.D. (Mechanical Engg.), Ph.D. in
+                                            Management, Ph.D. in Applied Chemistry, Ph.D. in Applied Physics, Ph.D. in Applied Mathematics, Ph.D. in various areas of Biotechnology, Ph.D. in law
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="cl2 ttabc-com  ml-3">
+                                <img class="ug-img img-fluid" src="../../admission/assets/img/Admission_home/gbu-phd.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container tab-pane" id="cr-dp">
+                    <br>
+                    <div class="fadeuponsc row w-100">
+                        <div class="container m-0 ttab w-100">
+                            <div class="cl1 ttabc-com mr-2">
+                                <div class="stats-copy">
+                                    <h2 class="text-lg-left">Certification/ Diploma Admissions</h2>
+                                    <div style="height: 5px; width: 150px; background-color:#FB8C00"></div>
+                                    <br>
+                                    <div class="text-justify">
+                                        <h5>Certification/Diploma Admissions</h5>
+                                        <table class="table table-striped">
+                                            @foreach (var item in Model)
+                                            {
+                                                if (item.level == "CD")
+                                                {
+                                                    <tr>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.code)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.name)
+                                                        </td>
+                                                        <td>
+                                                            <a href="/admissions/program/@Html.DisplayFor(modelItem => item.id)"> Details</a>
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            }
+
+                                        </table>
+                                        <p class="text-justify">
+                                            <li>   PGL01	PG DIPLOMA IN BUSINESS AND ECONOMIC LAWS
+                                            <li>   PGH01 	PG DIPLOMA IN ENGLISH LANGUAGE TEACHING (ELT) (PART-TIME,NON-RESIDENTIAL)
+                                            <li>    DH01	DIPLOMA IN URDU LANGUAGE (PART-TIME,NON-RESIDENTIAL)
+                                            <li>
+                                                CBS01 	CERTIFICATE COURSE IN PALI LANGUAGE AND LITERATURE (PART-TIME)
+                                            <li>
+                                                PGBS01 	PG DIPLOMA IN PALI LANGUAGE AND LITERATURE (PART-TIME)
+                                            <li>        PGBS02 	PG DIPLOMA IN BUDDHIST TOURISM AND HERITAGE (PART-TIME)
+                                        </p>
+                                    </div>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+            </div>
+        </div>
+
+        
+
+    </div>
+</div>

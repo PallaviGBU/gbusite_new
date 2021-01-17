@@ -1,7 +1,7 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
-
+	
   <title>Gautam Buddha University</title>
   <link rel="icon" type="image/gif/png" href="./img/logo_gbu.png">
 
@@ -38,8 +38,8 @@
       <h1>Admin Panel</h1>
       <hr>
         <div class="container mx-auto">
-					<h4>Manage E-Tenders</h4>
-					<form onsubmit="return confirm('Do you really want to submit the form?');" method="post" action="/gbu_ivy_99/e-tender" enctype="multipart/form-data">
+            <h4>Manage </h4>
+					<form onsubmit="return confirm('Do you really want to submit the form?');" method="post" action="/admin/<%=name%>" enctype="multipart/form-data">
 					  <div class="form-group row">
 					    <label type="text" class="col-sm-2 col-form-label">Title</label>
 					    <div class="col-sm-10">
@@ -48,16 +48,44 @@
 					    </div>
 					  </div>
 					  <div class="form-group row">
+					    <label type="text" class="col-sm-2 col-form-label">Description</label>
+					    <div class="col-sm-10">
+					      <textarea name="description" class="form-control" placeholder="Your text goes here!"></textarea>
+					    </div>
+					  </div>
+					  <div class="form-group row">
+					    <label class="col-sm-2 col-form-label">Select School</label>
+					    <div class="col-sm-10">
+								<select class="form-control" name="school">
+									<option value="all">MAIN</option>
+								  <option value="soict">SOICT</option>
+								  <option value="sob">SOB</option>
+								  <option value="sobs">SOBS</option>
+								  <option value="soe">SOE</option>
+                  <option value="som">SOM</option>
+                  <option value="soh">SOH</option>
+                  <option value="soljg">SOLJG</option>
+                  <option value="sovs">SOVS</option>
+								</select>
+					    </div>
+					  </div>
+					  <div class="form-group row">
 					    <label class="col-sm-2 col-form-label">Date Picker</label>
 					    <div class="col-sm-10">
 					      <input class="form-control" type="date" name="date">
 					    </div>
 					  </div>
+					  <div class="form-group row">
+					    <label class="col-sm-2 col-form-label">Choose Image</label>
+					    <div class="col-sm-10">
+					      <input class="form-control" accept="image/*" type="file" name="photo" required>
+							</div>
+					  </div>
             <div class="form-group row">
               <label class="col-sm-2 col-form-label">Choose File
-              </label>
+              (hold ctrl to upload multiple files)</label>
               <div class="col-sm-10">
-                <input class="form-control" accept="/*" type="file" name="file" required>
+                <input class="form-control" accept="/*" type="file" name="pdf" multiple >
               </div>
             </div>
 					  <div class="form-group row">
@@ -77,6 +105,6 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- Optional JavaScript -->
-    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
   </body>
 </html>

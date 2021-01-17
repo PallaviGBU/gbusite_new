@@ -46,6 +46,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -130,6 +136,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AcademicsController.cs" />
     <Compile Include="Controllers\AdmissionsController.cs" />
@@ -143,11 +151,39 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101161459526_Admission.cs" />
+    <Compile Include="Migrations\202101161459526_Admission.Designer.cs">
+      <DependentUpon>202101161459526_Admission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101162319303_News.cs" />
+    <Compile Include="Migrations\202101162319303_News.Designer.cs">
+      <DependentUpon>202101162319303_News.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101170039411_entities.cs" />
+    <Compile Include="Migrations\202101170039411_entities.Designer.cs">
+      <DependentUpon>202101170039411_entities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Entity.cs" />
+    <Compile Include="Models\Etender.cs" />
     <Compile Include="Models\Faculty.cs" />
+    <Compile Include="Models\Notice.cs" />
+    <Compile Include="Models\Program.cs" />
+    <Compile Include="Models\Recent.cs" />
+    <Compile Include="Models\Tender.cs" />
+    <Compile Include="Models\MyDbContext.cs" />
+    <Compile Include="NewsProvider.asmx.cs">
+      <DependentUpon>NewsProvider.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\PageController.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\gbuweb.mdf" />
+    <Content Include="App_Data\gbuweb_log.ldf">
+      <DependentUpon>gbuweb.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\about\css\style.css" />
     <Content Include="Content\about\img\BachchuSingh.jpg" />
     <Content Include="Content\about\img\banner_about1.png" />
@@ -174,6 +210,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\ccs.css" />
     <Content Include="Content\css\gbuclubs.css" />
     <Content Include="Content\css\now.css" />
     <Content Include="Content\css\style.css" />
@@ -291,6 +328,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="NewsProvider.asmx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\img\club\Thumbs.db" />
@@ -298,6 +336,8 @@
     <Content Include="Content\about\img\organisation.ai" />
     <Content Include="Content\about\img\Untitled-5.ai" />
     <Content Include="App_Data\tdata2.json" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Home\admin.cshtml" />
     <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -386,10 +426,10 @@
     <Content Include="Views\Page\dishayan.cshtml" />
     <Content Include="Views\Page\display.cshtml" />
     <Content Include="Views\Page\ecell.cshtml" />
-    <Content Include="Views\Page\edit_admin.cshtml" />
-    <Content Include="Views\Page\edit_e_tender.cshtml" />
-    <Content Include="Views\Page\edit_recent.cshtml" />
-    <Content Include="Views\Page\edit_tender.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\edit_admin.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\edit_e_tender.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\edit_recent.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\edit_tender.cshtml" />
     <Content Include="Views\Page\entity.cshtml" />
     <Content Include="Views\Page\etender.cshtml" />
     <Content Include="Views\Page\examinations.cshtml" />
@@ -462,8 +502,17 @@
     <Content Include="Views\Fac\getFaculties.cshtml" />
     <Content Include="Views\Shared\_LayoutSchool.cshtml" />
     <Content Include="Views\Shared\_LayoutLibrary.cshtml" />
+    <Content Include="Views\Admissions\admission_front_notice.cshtml" />
+    <Content Include="Views\Admissions\programlist.cshtml" />
+    <Content Include="Views\Admissions\admission_programm_all.cshtml" />
+    <Content Include="Views\Home\home_entity.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Content\userdata\admission\" />
+    <Folder Include="Content\userdata\entity\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -476,6 +525,17 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202101161459526_Admission.resx">
+      <DependentUpon>202101161459526_Admission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101162319303_News.resx">
+      <DependentUpon>202101162319303_News.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101170039411_entities.resx">
+      <DependentUpon>202101170039411_entities.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
